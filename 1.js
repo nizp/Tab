@@ -1,6 +1,8 @@
-	function Tab(){
-		this.div = document.getElementsByTagName('div');
-		this.btn = document.getElementsByTagName('input');
+	function Tab(id){
+	
+		this.box = document.getElementById(id);
+		this.div = this.box.getElementsByTagName('div');
+		this.btn = this.box.getElementsByTagName('input');
 	}
 	
 	Tab.prototype.clicks = function(){
