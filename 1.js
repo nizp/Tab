@@ -13,4 +13,12 @@ function fn(){
 		}
 	}
 	
+	Tab.prototype.clear = function(index){
+		for(var i=0;i<this.btn.length;i++){
+			this.btn[i].className = '';
+			this.div[i].className = '';
+		}
+		this.btn[index].className = 'active';
+		this.div[index].className = 'show';
+	}
 }
