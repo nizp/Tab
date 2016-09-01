@@ -8,13 +8,15 @@
 	margin: 0;
 	padding: 0;
 }
-#box1 div{
+
+#box div{
 	width: 200px;
 	height: 200px;
 	border: 1px solid #000;
 	display: none;
 }
-#box1 div.show{
+
+#box div.show{
 	display: block;
 }
 .active{
@@ -24,14 +26,19 @@
 </style>
 </head>
 <body>
-	<div id="box1">
+	<div id="box">
 		<input type="button" value="按钮一" class="active"/>
 		<input type="button" value="按钮二" />
 		<input type="button" value="按钮三" />
-		<div class="show">1111111</div>
-		<div>222222</div>
-		<div>33333</div>
+		<div class="show">111111111</div>
+		<div>2222222222</div>
+		<div>333333333</div>
 	</div>
-<script src="1.js" type="text/javascript" charset="utf-8"></script>
+<script src="1.js"></script>
+<script type="text/javascript">
+	
+	var t1 = new Tab('box');
+	t1.clicks();
+</script>
 </body>
 </html>
