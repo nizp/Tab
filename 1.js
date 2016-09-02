@@ -3,6 +3,8 @@
 		this.box = document.getElementById(id);
 		this.div = this.box.getElementsByTagName('div');
 		this.btn = this.box.getElementsByTagName('input');
+		this.num = 0;
+		this.timer = 0;
 	}
 	
 	Tab.prototype.clicks = function(){
@@ -22,3 +24,13 @@
 		this.btn[index].className = 'active';
 		this.div[index].className = 'show';
 	}
+	Tab.prototype.play = function(){
+		var _this = this;
+		this.timer = setInterval(function(){
+			_this.num++;
+			_this.num %= _this.btn.length;
+			_this.clear(_this.num);
+		},1000);
+	}
+	
+	
