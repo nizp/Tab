@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		git:
+			工具，版本控制
+				保存开发的代码，有利于还原等操作。
+
+
+		github:
+			网站，社交平台，参与开源项目，远程仓库
+			
+			
+		SVN：集成式
+			只有将本地的文件传入到中央服务器才能进行版本控制。
+			
+		git:分布式
+			每台计算机就算一个服务器，本地控制版本
+			
+			
+		windows
+		下载客户端：
+		https://desktop.github.com/
+		http://rj.baidu.com/soft/detail/30195.html?ald
+		
+		
+		git与github绑定
+		
+		如何做版本控制？
+			1.在github上创建一个项目。
+			
+			2.把github上的项目拉取到本地。
+				
+				（1）本地新建一个文件目录
+				（2）通过cd 命令进入目录
+				（3）git clone github上的项目地址
+				（4）cd 进入项目  （master）就说明成功了
+			
+			
+				ls查看本目录下的文件
+		
+		查看状态：
+			git status
+		
+		从工作区到暂存区
+			git add 文件名
+			
+			一次性操作多个文件    git add .
+		
+		从暂存区到版本区
+			git commit -m "tab"
+			
+		直接从工作区到版本区
+			git commit -a -m "注释"
+		
+		git push origin master
+		
+		git log (查看版本记录)
+			
+		q键位返回命令行	
+			
+		
+		
+		对比：
+		
+			暂存区工作区的差异
+				git diff
+				
+			暂存区与版本区的差异
+				git diff --cached
+				
+			工作区与版本区的差异
+				git diff master
+				
+		撤销:
+			暂存区撤销回工作区
+				git reset HEAD 文件名
+			
+			
+			把工作区的代码更换成版本区的
+				git checkout -- 文件名
+				
+				
+			如果有2个以上文件，一个提交到版本库了，
+			另一个忘记提交，可以先将另一个文件拉到缓存区，
+			然后通过git commit -m “注释”--amend 撤销回来，
+			最后自动一次性提交暂存区中的文件
+			(2个文件一起提交)，git log查看是否提交成功
+		
+		删除
+			如果暂存区里面有文件，手动删除本地也想删除暂存区里面的文件
+				git rm 文件名
+			
+			一次性删除暂存区和工作区
+				git rm -f 文件名
+				
+			只想删除暂存区，不删除工作区
+				git rm --cached 文件名
+		
+		
+		恢复（回滚）：
+		
+			指定文件回滚：
+				git checkout 历史记录（版本名）  指定文件名
+				
+			整个版本回滚
+				git reset --hard  历史记录（版本名）
+			
+			回滚上一个（连续输入继续回滚上一个的上一个）
+				git reset --hard HEAD^   回滚版本记录 
+
+			回滚上几个版本
+				git reset --hard HEAD~1
+			
+			git reflog  查看可以操作的版本ID
+			
+		
+		同步到远程仓库
+			远程仓库的名字（默认为origin）
+
+			git remote     (查看远程仓库的名字)
+			git remote -v  (查看远程仓库对应的地址)
+			git remote add 创建仓库的名字
+		
+		git push origin master
+			
+	
+	如何给别人项目权限
+		
+		1）github中进入项目
+		2）点击+号， New collaborator
+		3）Search by username, full name or email address
+			输入要添加人的github账号名
+		
+	
+	多人开发遇到冲突的解决办法
+		当提交项目到远程仓库的时候，发生了冲突
+		1)拉取
+			git fetch
+		
+		2)检查冲突
+			git diff master origin/master
+			(能够查看冲突)
+		3)合并代码
+			git merge origin/master
+		(在编辑器中就会显示版本库中的代码和远程仓库的代码，必须人为的判断留下哪段代码。将不要的代码删除)
+		
+		4)冲突已经解决完毕，重新提交，重新push
+			
+		
+			
+			
+			
+	*/
+</script>
+</body>
+</html>

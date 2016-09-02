@@ -32,6 +32,3 @@
 			_this.clear(_this.number);
 		},1000)
 	}
-	
-	
-	
