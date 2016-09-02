@@ -32,3 +32,7 @@
 			_this.clear(_this.number);
 		},1000)
 	}
+	Tab.prototype.stop = function(){
+		clearInterval(this.time);
+		this.time = null;
+	}
